@@ -47,8 +47,9 @@ body{
     height: 100vh;
 }
 p{
+    font-family: "Roboto", serif;
     color: light-dark(#181A1B, #E8E6E3);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 /* Navbar */
@@ -57,10 +58,10 @@ p{
     backdrop-filter: blur(4px);
     background-color: light-dark(#F5F5F5, #121314);
     margin: 1% 30%;
-    border-top-left-radius:30px;
-    border-bottom-left-radius:30px;
-    border-top-right-radius:30px;
-    border-bottom-right-radius:30px;
+    border-top-left-radius:35px;
+    border-bottom-left-radius:35px;
+    border-top-right-radius:35px;
+    border-bottom-right-radius:35px; 
     min-width: 650px;
     max-width: 650px;
     margin: 1% auto;
@@ -76,7 +77,8 @@ p{
 }
 .nav-link{
     color : light-dark(#181A1B, #E8E6E3);
-    font-size: 1.2rem;
+    font-family: "Roboto", serif;
+    font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
 }
@@ -94,10 +96,10 @@ p{
     grid-template-columns: 1fr 1fr;
     border: 1px solid light-dark(#181A1B, #E8E6E3);
     background-color: light-dark(#E8E6E3, #181A1B);
-    border-top-left-radius:30px;
-    border-bottom-left-radius:30px;
-    border-top-right-radius:30px;
-    border-bottom-right-radius:30px; 
+    border-top-left-radius:35px;
+    border-bottom-left-radius:35px;
+    border-top-right-radius:35px;
+    border-bottom-right-radius:35px; 
     margin: 0 100%;
 }
 .mode-icon{
@@ -217,9 +219,6 @@ p{
         transform: scale(1.03);
     }
 }
-.box-container p{
-    font-size: large;
-}
 .ltext-box{
     width: 35%;
     padding: 3%;
@@ -314,7 +313,7 @@ p{
 
 /* Misc */
 .title{
-    font-family: "Yellowtail", cursive;
+    font-family: "Roboto", serif;
     color: light-dark(#1845B1,#74B72E);
     font-size: 8em;
     text-shadow: -0.5px -1px #E8E6E3;
@@ -344,7 +343,8 @@ p{
     margin-bottom: 5%;
     font-weight: bold;
     text-align: left;
-    color: light-dark(#181A1B, #E8E6E3);
+    /* color: light-dark(#181A1B, #E8E6E3); */
+    color: light-dark(#1845B1,#74B72E);
 }
 .email{
     font-family: monospace;
