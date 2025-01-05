@@ -32,10 +32,10 @@
   <div id="nav1" class="fixed-top navbar">
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" href="#title">Home</a>
+        <a class="nav-link"href="#title">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link"href="#about">About</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#projects">Projects</a>
@@ -56,15 +56,13 @@
 
   <section id="title">
     <div class="first contain">
-        <div>
-            <h1 class="title">Dave Russell</h1>
-            <h3 class="subtitle">full-stack web developer.</h3>
-            <div>
-              <a href="#about">
-                <img id="downarrow" src="./images/double-down-arrow.png" alt="down_arrow">
-              </a>
-            </div>
-        </div> 
+          <h1 class="title">Dave Russell</h1>
+          <h3 class="subtitle">full-stack web developer.</h3>
+          <div>
+            <a href="#about">
+              <img id="downarrow" src="./images/double-down-arrow.png" alt="down_arrow">
+            </a>
+          </div>
     </div>
   </section>
 
@@ -74,7 +72,7 @@
   <section id="about">
     <div class="second contain">
       <h1 class="heading">about me.</h1>
-      <div class="section">
+      <div class="med-contain">
         <div class="med-box">
           <h3 class="subheading">Who am I?</h3>
           <p>I'm Dave! Software Engineer and Web Developer. I create clean, efficient 
@@ -133,59 +131,56 @@
     <div id="projects" class="third contain">
       <h1 class="heading">projects.</h1>
 
-      <div class="box-container">
-        <div class="ltext-box text-box">
+      <div class="box-contain">
+        <div class="l-box txt-box">
           <h3 class="subheading">Hobby Website</h3>
           <p>A fun website for hosting video game guides, blogs and miscellaneous Web apps.</p>
-          <p>I created this website to experement with css styling and themes, as well as a place to 
-            host some of the web apps I've made.</p>
+          <p>I created this website to experement with css styling and techniques.</p>
         </div>
-        <div class="rimg-box img-box">
+        <div class="r-box img-box">
           <a href="./Gaming Hobby/index.html">
-            <img class="rimg" src="./images/hobby.PNG" alt="hobby_website">
+            <img class="img" src="./images/f1.png" alt="hobby_website">
           </a>
         </div>
       </div>
 
-      <div class="box-container">
-        <div class="limg-box img-box">
+      <div class="box-contain">
+        <div class="l-box img-box">
           <a href="./product/index.html">
-            <img class="limg" src="./images/product.PNG" alt="product_page">
+            <img class="img" src="./images/product.png" alt="product_page">
           </a>
         </div>
-        <div class="rtext-box text-box">
+        <div class="r-box txt-box">
           <h3 class="subheading">Product Page</h3>
           <p>Modern product page featuring the 'best' mobile app.</p>
           <p>A reactive product page that displays clearly on desktop and mobile browsers. </p>
         </div>
       </div>
 
-      <div class="box-container">
-        <div class="ltext-box text-box">
+      <div class="box-contain">
+        <div class="l-box txt-box">
           <h3 class="subheading">Book Notes</h3>
           <p>A website for book reviews.</p>
-          <p>Front-end created using the React.js framework and EJS library.</p>
-          <p>API integration for automated retrival of cover art and book information.</p>
-          <p>SQL Database for information storage.</p>
+          <p>Front-end written in HTML & CSS and EJS.</p>
+          <p>Back-end runs on the Express and Node.js</p>
         </div>
-        <div class="rimg-box img-box">
+        <div class="r-box img-box">
           <a href="http://localhost:3000/">
-            <img class="rimg" src="./images/booknotes.png" alt="book_notes">
+            <img class="img" src="./images/book.png" alt="book_notes">
           </a>
         </div>
       </div>
 
-      <div class="box-container">
-        <div class="limg-box img-box">
+      <div class="box-contain">
+        <div class="l-box img-box">
           <a href="./mondrian/mondrian.html">
-            <img class="limg" src="./images/css art.PNG" alt="css_art">
+            <img class="img" src="./images/art.png" alt="css_art">
           </a>
         </div>
-        <div class="rtext-box text-box">
+        <div class="r-box txt-box">
           <h3 class="subheading">CSS Art</h3>
           <p>A selection of famous artworks re-created with code.</p>
           <p>Some fun with CSS Grid for scalable, accurate positioning.</p>
-          <p>Pure HTML5 and CSS.</p> 
         </div>
       </div>
 
@@ -197,10 +192,13 @@
 
   <section id="contact">
     <div class="fourth contain">
-      <h1 class="heading">contact.</h1>
-      <p>Interested in what I do, or just want to say hi?</p>
-      <p>Send me an email:</p>
-      <h3 class="email">russell.flay@gmail.com</h3>
+      <div>
+        <h1 class="heading">contact.</h1>
+        <p>Interested in what I do, or just want to say hi?</p>
+        <a href="mailto:russell.flay@gmail.com">
+          <button class="button">Send me an email!</button>
+        </a>
+      </div>
     </div>
   </section>
 
