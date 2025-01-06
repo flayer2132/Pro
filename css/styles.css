@@ -56,7 +56,6 @@ p{
     border: 1px solid light-dark(#181A1B, #E8E6E3);
     backdrop-filter: blur(4px);
     background-color: light-dark(#F5F5F5, #121314);
-    margin: 1% 30%;
     border-top-left-radius:35px;
     border-bottom-left-radius:35px;
     border-top-right-radius:35px;
@@ -88,7 +87,7 @@ p{
     text-underline-offset: 8px;
 }
 .nav-link.active{
-    color: light-dark(#1845B1,#74B72E) !important;
+    color: light-dark(#1845B1,#74B72E);
 }
 #mode-switch{
     display: grid;
@@ -99,10 +98,16 @@ p{
     border-bottom-left-radius:35px;
     border-top-right-radius:35px;
     border-bottom-right-radius:35px; 
-    margin: 0 100%;
+    margin-left: 100%;
 }
 .mode-icon{
     margin: 5px;
+}
+.navbar-toggler{
+    border-color : light-dark(#181A1B, #E8E6E3);
+}
+.navbar-toggler-icon{
+    color : light-dark(#181A1B, #E8E6E3);
 }
 
 /* Pages */
@@ -280,6 +285,43 @@ p{
 @media screen and (max-width: 1200px) {
     .title{
         font-size: 6em;
+    }
+}
+@media screen and (max-width: 649px) {
+    .navbar{
+        min-width: 490px;
+        max-width: 490px;
+    }
+    .nav-link{
+        font-size: 1rem;
+    }
+    #mode-switch{
+        margin-left: 50%;
+    }
+}
+@media screen and (max-width: 499px) {
+    .navbar{
+        min-width: 390px;
+        max-width: 390px;
+    }
+    .nav-link{
+        font-size: 0.9rem;
+    }
+    #mode-switch{
+        margin-left: 0%;
+    }
+}
+@media screen and (max-width: 399px) {
+    .navbar{
+        min-width: 0;
+        max-width: 310px;
+    }
+    .nav-link{
+        font-size: 0.9rem;
+        padding: 0.4em;
+    }
+    #mode-switch{
+        margin-left: 0%;
     }
 }
 @media screen and (max-width: 600px) {
