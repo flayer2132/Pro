@@ -50,6 +50,9 @@ p{
     color: light-dark(#181A1B, #E8E6E3);
     font-size: 1.2rem;
 }
+a{
+    text-decoration: none;
+}
 
 /* Navbar */
 .navbar{
@@ -75,7 +78,7 @@ p{
 }
 .nav-link{
     color : light-dark(#181A1B, #E8E6E3);
-    font-family: "Roboto", serif;
+    font-family: monospace, serif;
     font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
@@ -112,7 +115,7 @@ p{
 
 /* Pages */
 .contain{
-    padding: 5% 10%;
+    padding: 5% 20%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -199,6 +202,7 @@ p{
     border-radius: 10px;
     margin-top: 5%;
     width: 100%;
+    height: 10%;
     transition: 0.5s ease;
 }
 .box-contain:hover {
@@ -209,20 +213,18 @@ p{
 }
 .txt-box{
     background-color: light-dark(#E0E0E0, #202125);
-    width: 35%;
+    width: 32%;
     padding: 3%;
     text-align: left;
     overflow: hidden;
 }
 .img-box{
-    width: 65%;
+    width: 68%;
     overflow: hidden;
 }
 .img{
     filter: blur(1px);
     transition: 0.5s ease;
-    margin: auto;
-    display: block;
     width: 100%;
 }
 .r-box{
@@ -306,9 +308,10 @@ p{
     }
     .nav-link{
         font-size: 0.9rem;
+        padding: 0.4em;
     }
     #mode-switch{
-        margin-left: 0%;
+        margin-left: 25%;
     }
 }
 @media screen and (max-width: 399px) {
@@ -333,21 +336,21 @@ p{
      }
 }
 .subtitle{
-    font-family: monospace;
+    font-family: monospace, serif;
     font-size: 2em;
     text-align: right;
     color: light-dark(#181A1B, #E8E6E3);
     margin-bottom: 5%;
 }
 .heading{
-    font-family: monospace;
+    font-family: monospace, serif;;
     font-size: 3em;
     margin-bottom: 2em;
     font-weight: bold;
     color: light-dark(#181A1B, #E8E6E3);
 }
 .subheading{
-    font-family: monospace;
+    font-family: monospace, serif;;
     font-size: 2em;
     margin-bottom: 1em;
     font-weight: bold;
@@ -357,7 +360,7 @@ p{
 .third .heading{
     margin-bottom: 1em;
 }
-.button{
+.go-button{
     color: light-dark(#E8E6E3, #181A1B);
     background-color: light-dark(#1845B1,#74B72E);
     border: none;
@@ -366,7 +369,7 @@ p{
     text-align: center;
     font-weight: bold;
     font-size: 1.2em;
-    padding: 1em;
+    padding: 0.8em 1em;
 }
 
 /* change appearance based on user theme preference */
