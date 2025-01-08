@@ -115,7 +115,7 @@ a{
 
 /* Pages */
 .contain{
-    padding: 5% 20%;
+    padding: 5% 2%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,7 +153,7 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    max-width: 1200px;
 }
 .med-box{
     text-align: left;
@@ -305,7 +305,7 @@ a{
 /* Media */
 @media screen and (min-width: 1250px) {
     .box-contain{
-        width: 1200px;
+        max-width: 1200px;
         height: 450px;
     }
 }
@@ -351,6 +351,9 @@ a{
     }
     #mode-switch{
         margin-left: 25%;
+    }
+    .title{
+        font-size: 6em;
     }
 }
 @media screen and (max-width: 399px) {
