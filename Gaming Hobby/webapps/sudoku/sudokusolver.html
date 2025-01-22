@@ -25,15 +25,6 @@
 
   <!-- Heading -->
   <div class="heading">
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Menu
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="sudoku.html">Play Sudoku</a></li>
-        <li><a class="dropdown-item" href="sudokusolver.html">Sudoku Solver</a></li>
-      </ul>
-    </div>
     <h1 class="title">Sudoku Solver</h1>
     <p class>Beta</p>
   </div>
@@ -161,17 +152,30 @@
     <div class="buttons">
       <button class="erase"><img src="images/eraser.png" class="eraser-img">Erase</button>
       <button class="solve">Solve!</button>
-      <button class="newgame">New Game</button>
+      <button class="btn btn-secondary dropdown-toggle newgame" type="button" data-bs-toggle="dropdown" aria-expanded="false">New Game</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item start1">Easy</a></li>
+        <li><a class="dropdown-item start2">Medium</a></li>
+        <li><a class="dropdown-item start3">Hard</a></li>
+      </ul>
+
     </div>
 
   </div>
 
   <div class="howto">
     <div>
-      <h3>How to use Solver:</h3>
-      <p>1. Click on a grid square to select it, then click a number to fill in the square.</p>
-      <p>2. Click Solve! and the solver will fill in any remaining empty squares.</p>
-      
+      <h3>How to Play:</h3>
+      <p>Sudoku is played on a grid of 9 x 9 spaces.</p>
+      <p>This grid contains 9 rows, coumns and boxes.</p>
+      <p>Fill out the entire grid using only the numbers 1 to 9, 
+        without repeating any numbers in each row, column or box.</p>
+        <ol>
+          <li>Press the New Game button to begin.</li>
+          <li>Click on a grid square to select it, then click on a number to fill in that square.</li>
+          <li>Fill in all the squares correctly to win.</li>
+          <li>Pressing Solve will attempt to solve the grid for you.</li>
+        </ol>
     </div>
   </div>
 

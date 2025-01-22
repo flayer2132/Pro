@@ -28,12 +28,19 @@ let errors = 0;
 
 window.onload = clearAll();
 
+let difficulty = "m";
+
+// -----------------------------------------------------------------------------------
+
+// Major Bugs
+// 1.  solver does not re-print backup grid to UI on restore
+
 //------------------------------------------------------------------------------------
 
+// Minor Bugs
 // 1.  can generate impossible f columns (~5% chance)
-//      will restart generation on detection via function
+//        will restart generation on detection via function
 // 2.  does not update existing highlighted numbers if they become legal
-// 3.  solver erases user entered row on error
 
 //------------------------------------------------------------------------------------
 
@@ -141,28 +148,45 @@ function solve(){
     //assign clues to each set, returning true on fail
     error = assignClues(set);
 
-    //if cannot assign all 9 postions in a given set, re-assign entire grid
+    //if cannot assign all 9 postions in a given set, try again
     if (error == true){
       fails++;
       //start cycle again
       i = 0;
-      //reset grid
+
+      //restore grid - erase partial solve
       clearAll();
-      console.log("** failed to generate set " + set + " -- regenerating entire grid **");
+      console.log("** failed to generate set " + set + " -- restoring backup and restarting **");
       grid = JSON.parse(JSON.stringify(gridSave));
-      //if solver fails 3 times, break solver
-      if (fails > 2){
+      reprint();
+
+      //if solver fails more than three times, break solver
+      if (fails > 1999){
         i = 11;
+        console.log("Solve attempts " + fails + " - cancelling - try again?");
+        alert("Solve attempts exceeding limit. Cancelling solve. You may try again.")
+        break;
       };
     };
   };
 
-  if(fails < 3){
+  if(fails < 2000){
     console.log("Sudoku has been Solved!");
-  } else {
-    console.log("Invalid Sudoku - cannot solve");
+    console.log("attempts taken to solve: " + fails);
   };
 
+};
+
+function reprint(){
+  for (let c = 0; c < 9; c++) {
+    let set = chars[(c)];
+    let column = "set" + set;
+    let i = 0;
+    grid[column].forEach((element) => {
+      setNumber(set, i, element)
+      i++;
+    });
+  };
 };
 
 
@@ -249,12 +273,22 @@ function scrubGrid(){
   for (let i = 0; i < 9; i++) {
     let set = chars[i];
 
-    //random mumber between 0 and 9
-    let clues = Math.floor(Math.random() * 10);
+    //random mumber of empty squares, based on difficulty
+    let clues;
+    if (difficulty == "e"){
+      clues = 2;
+      // Math.floor(Math.random() * (6 - 4)) + 4;
+    } else if (difficulty == "m"){
+      clues = 4;
+      // Math.floor(Math.random() * (4 - 2)) + 2;
+    } else if (difficulty == "h"){
+      clues = 8;
+      // Math.floor(Math.random() * (2 - 1)) + 1;
+    };
 
     let empty = clues;
     
-    //number of times equal to empty, can duplicate
+    //number of times up to empty, (can duplicate)
     for (let i = 0; i < empty; i++) {
       //random pos
       let pos = Math.floor((Math.random() * 9));
@@ -450,7 +484,7 @@ function assignClues(set){
       //infinite loop detector
       //break generation for current set if cannot assign after number of cycles
       //not expected to execute, is a catch all to prevent infinite loops
-      if(cycle > 100){
+      if(cycle > 20){
         console.log("unable to assign set " + set);
         return true;
       };
@@ -894,7 +928,7 @@ function setNumber(set, pos, num){
 
   //log status
   // console.log("writing grid: " + newSquare);
-  // console.log("assigning set: " + num + " to " + pos + set);
+  console.log("assigning " + num + " to " + set + pos);
 
   grid[array].splice(pos, 1, num);
 
@@ -938,9 +972,28 @@ $(".back").on("click", function(){
 });
 
 //clear all and run a new game when new game is pressed
-$(".newgame").on("click", function(){
+$(".start1").on("click", function(){
   if(confirm("Start a new game?")){
     clearAll();
+    difficulty = "e";
+    cycleGrid();
+  };
+});
+
+//clear all and run a new game when new game is pressed
+$(".start2").on("click", function(){
+  if(confirm("Start a new game?")){
+    clearAll();
+    difficulty = "m";
+    cycleGrid();
+  };
+});
+
+//clear all and run a new game when new game is pressed
+$(".start3").on("click", function(){
+  if(confirm("Start a new game?")){
+    clearAll();
+    difficulty = "h";
     cycleGrid();
   };
 });
