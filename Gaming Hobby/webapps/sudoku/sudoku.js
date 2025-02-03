@@ -172,7 +172,7 @@ function solve(){
 
   if(fails < 2000){
     console.log("Sudoku has been Solved!");
-    console.log("attempts taken to solve: " + fails);
+    console.log("attempts to solve: " + fails);
   };
 
 };
@@ -282,7 +282,7 @@ function scrubGrid(){
       clues = 4;
       // Math.floor(Math.random() * (4 - 2)) + 2;
     } else if (difficulty == "h"){
-      clues = 8;
+      clues = 9;
       // Math.floor(Math.random() * (2 - 1)) + 1;
     };
 
