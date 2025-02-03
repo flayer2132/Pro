@@ -1,0 +1,88 @@
+body{
+  text-align: center;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.title{
+  margin: 0;;
+  font-size: 3rem;
+  font-family: "Mouse Memoirs", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Title */
+.heading{
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+}
+.footing{
+  width: 600px;
+}
+.footing li{
+  text-align: left;
+}
+
+/* Game */
+.frame{
+  display: grid;
+  grid-template-columns: 200px 800px 200px;
+  grid-template-rows: 600px;
+  width: 1200px;
+  height: 600px;
+  border: 2px solid black;
+}
+.level{
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  width: 800px;
+  height: 600px;
+  border: 1px solid black;
+}
+.square{
+  font-size: 1.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Kalam", cursive;
+}
+.square:hover{
+  background-color: #008CBA25;
+}
+.pressed{
+  background-color: #008CBA50;
+}
+
+.green{
+  background-color: #4B9A49;
+  border: 1px solid #228B22;
+}
+
+/* buttons */
+.newgame{
+  border: none;
+  border-radius:  0.375rem;
+  color: white;
+  width: 100px;
+  background-color: #228B22;
+}
+.newgame:hover {
+  background-color: #228B2290;
+}
+
+.quit{
+  border: none;
+  border-radius: 0.375rem;
+  color: white;
+  width: 100px;
+  background-color: #808080;
+}
+.quit:hover {
+  background-color: #80808090;
+}
